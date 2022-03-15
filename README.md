@@ -1,1 +1,7 @@
-# algorithm_Team_note
+# Algorithm_Team_Note
+
+* Python
+
+
+
+* JavaScript
