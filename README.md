@@ -5,7 +5,7 @@
 
 
 ## Python
-
+-------------------
 ### 자료구조
 
 1. 스택
@@ -14,9 +14,17 @@
 4. 그래프
 5. 트리
 
+-------------------
+
 ### 알고리즘
 
-[1. binary Search](Python/binary.py)
+[1. binary Search](Python/binary.py) <br>
+2. shortest Path <br>
+    - [dijkstra](Python/shortest_Path.py) <br>
+3. Graph <br>
+    - [Union Find](Python/Union_Find.py) <br>
+    - [Spanning Tree](Python/Spanning_Tree.py) <br>
+    - [Topology Sort](Python/Topology_Sort.py) <br>
 
 -------------
 ## JavaScript
