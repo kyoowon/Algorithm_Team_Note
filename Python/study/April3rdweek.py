@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # # def solution(price, money, count):
 # #     cost = ((1 * price) + (count * price)) * (count // 2)
 # #     # count 홀수인 경우
