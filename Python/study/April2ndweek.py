@@ -124,70 +124,70 @@
 
 # 최종순위
 
-from collections import deque
+# from collections import deque
 
-def solutions():
-	n = int(input())
-	data = list(map(int, input().split()))
+# def solutions():
+# 	n = int(input())
+# 	data = list(map(int, input().split()))
 
-	graph = [[False] * (n + 1) for _ in range(n + 1)]
-	indegree = [0] * (n + 1)
+# 	graph = [[False] * (n + 1) for _ in range(n + 1)]
+# 	indegree = [0] * (n + 1)
 
-	for i in range(n):
-		for j in range(i + 1, n):
-			graph[data[i]][data[j]] = True
-			indegree[data[j]] += 1
+# 	for i in range(n):
+# 		for j in range(i + 1, n):
+# 			graph[data[i]][data[j]] = True
+# 			indegree[data[j]] += 1
 
-	# m만큼 순위 변동이 일어남
-	m = int(input())
-	for _ in range(m):
-		a, b = map(int, input().split())
+# 	# m만큼 순위 변동이 일어남
+# 	m = int(input())
+# 	for _ in range(m):
+# 		a, b = map(int, input().split())
 
-		if graph[a][b]:
-			graph[a][b] = False
-			indegree[b] -= 1
-			graph[b][a] = True
-			indegree[a] += 1
-		else:
-			graph[a][b] = True
-			indegree[b] += 1
-			graph[b][a] = False
-			indegree[a] -= 1
+# 		if graph[a][b]:
+# 			graph[a][b] = False
+# 			indegree[b] -= 1
+# 			graph[b][a] = True
+# 			indegree[a] += 1
+# 		else:
+# 			graph[a][b] = True
+# 			indegree[b] += 1
+# 			graph[b][a] = False
+# 			indegree[a] -= 1
 
-	result = []
-	q = deque()
+# 	result = []
+# 	q = deque()
 
-	for i in range(1, n + 1):
-		if indegree[i] == 0:
-			q.append(i)
+# 	for i in range(1, n + 1):
+# 		if indegree[i] == 0:
+# 			q.append(i)
 
-	flag = 0
+# 	flag = 0
 
-	for i in range(n):
-		if len(q) == 0:
-			flag = -1
-			break
-		if len(q) > 1:
-			flag = -2
-			break
-		now = q.popleft()
-		result.append(now)
-		for j in range(1, n + 1):
-			if graph[now][j]:
-				indegree[j] -= 1
-				if indegree[j] == 0:
-					q.append(j)
+# 	for i in range(n):
+# 		if len(q) == 0:
+# 			flag = -1
+# 			break
+# 		if len(q) > 1:
+# 			flag = -2
+# 			break
+# 		now = q.popleft()
+# 		result.append(now)
+# 		for j in range(1, n + 1):
+# 			if graph[now][j]:
+# 				indegree[j] -= 1
+# 				if indegree[j] == 0:
+# 					q.append(j)
 
-	if flag == -1:
-		print("IMPOSSIBLE")
-	elif flag == -2:
-		print("?")
-	else:
-		for i in result:
-			print(i, end=' ')
-		print()		
+# 	if flag == -1:
+# 		print("IMPOSSIBLE")
+# 	elif flag == -2:
+# 		print("?")
+# 	else:
+# 		for i in result:
+# 			print(i, end=' ')
+# 		print()		
 
-t = int(input())
+# t = int(input())
 
-for _ in range(t):
-	solutions()
+# for _ in range(t):
+# 	solutions()
