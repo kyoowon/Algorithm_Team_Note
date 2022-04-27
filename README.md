@@ -30,3 +30,5 @@
 -------------
 ## JavaScript
 -------------
+
+[1. JavaScript](JavaScript/team_note.js)<br>
