@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr){
+                for (i = 0; i < arr.length - 1; i++){
+                    for (j = i + 1; j < arr.length; j++){
+                        const temp = arr.filter((element, index) => index != i && index != j)
+                        const sum = temp.reduce((acc, value) => acc + value)
+                        if (sum === 100) return temp
+
+                    }
+                }
+            }
+            
+            let arr=[20, 7, 23, 19, 10, 15, 25, 8, 13];
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>
