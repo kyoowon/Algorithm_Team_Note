@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr){  
+                let answer=Number.MIN_SAFE_INTEGER;
+                for (let i = 0; i < arr.length; i++){
+                    let col = row = 0
+                    for (let j = 0; j < arr.length; j++){
+                        row += arr[i][j]
+                        col += arr[j][i] 
+                    }
+                    asnwer = Math.max(answer, row, col)
+                }
+                let leftCrrows = rightCrrows = 0
+                for (let i = 0; i <arr.length; i++){
+                    leftCrrows += arr[i][i];
+                    rightCrrows += arr[i][arr.length - i - 1]
+                }
+                answer = Math.max(answer, leftCrrows, rightCrrows)
+                return answer;
+            }
+
+            let arr=[[10, 13, 10, 12, 15], 
+                     [12, 39, 30, 23, 11],
+                     [11, 25, 50, 53, 15],
+                     [19, 27, 29, 37, 27],
+                     [19, 13, 30, 13, 19]];
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>

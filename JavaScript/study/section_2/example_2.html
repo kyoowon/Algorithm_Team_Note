@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function solution(arr) {
+            answer = 0
+            tall = 0
+            for (student of arr){
+                if (tall < student){
+                    tall = student
+                    answer += 1
+                }
+            }
+            return answer
+        }
+        console.log(solution([130, 135, 148, 140, 145, 150, 153]))
+    </script>
+
+</body>
+</html>

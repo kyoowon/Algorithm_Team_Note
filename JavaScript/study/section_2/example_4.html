@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const solution = arr => {
+            answer = 0;
+            count = 0
+            arr.forEach((element) => {
+                if(element === 1){
+                    count += 1
+                    answer += count
+                }
+                else count = 0
+            })
+            return answer
+        }
+        console.log(solution([1, 0, 1, 1, 1, 0, 0, 1, 1, 0]))
+    </script>
+</body>
+</html>
