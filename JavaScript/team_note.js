@@ -9,6 +9,15 @@ function ArrayFunc(arr){
 
     // 원소 추출 - 해당 index, 갯수
     const newArray = a.splice(index, 1)
+
+    // 0인 array를 생성하는 방법 - 길이가 len만큼에 설정할 수 있음.
+    let answer = Array.from({length : len}, () => 0)
+}
+
+function StringFunc(string){
+    let str_sub1 = s.substring(mid - 1, mid + 1)
+    let str_sub2 = s.substr(mid - 1, 2)
+    console.log(str_sub1, str_sub2)
 }
 
 // forEach, map, filter, reduce

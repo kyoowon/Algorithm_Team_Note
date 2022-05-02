@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const solution = (s, c) => {
+            const len = s.length;
+            let answer = Array.from({length : len}, () => 100)
+            let count = 100
+            for(i = 0; i < len; i++){
+                if (s[i] === c){
+                    count = 0
+                }
+                else count += 1
+                answer[i] = count
+            }
+            for(j = len - 1; j >= 0; j--){
+                if (s[j] === c){
+                    count = 0
+                }
+                else count += 1
+                answer[j] = Math.min(count, answer[j])
+            }
+            return answer
+        }
+        console.log(solution("teachermode", "e"))
+    </script>
+</body>
+</html>

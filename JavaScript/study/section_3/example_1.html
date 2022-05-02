@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const solution = (s) => {
+            // temp = s.toUpperCase()
+            // for (i = 0; i < s.length / 2; i++) if (temp[i] !== temp[temp.length - i - 1]) return "NO"
+            // return "YES"
+            s = s.toUpperCase()
+            if (s.split('').reverse().join('') === s) return "YES"
+            return "NO"
+        }
+        console.log(solution("gooG"))
+    </script>
+</body>
+
+</html>
