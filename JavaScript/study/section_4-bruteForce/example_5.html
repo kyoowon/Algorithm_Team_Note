@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const getCombinations = (arr, selectNumber) => {
+            const results = [];
+            if (selectNumber === 1) return arr.map((el) => [el])
+            arr.forEach((fixed, index, origin) => {
+                const rest = origin.slice(index + 1);
+                const combinations = getCombinations(rest, selectNumber - 1);
+                const attached = combinations.map((el) => [fixed, ...el]);
+                results.push(...attached);
+            });
+            return results
+        }
+        const solution = (arr, n) => {
+            arr.filter((value, index) => {if(arr.indexOf(value) === index) return value})
+            let comb = getCombinations(arr, 3)
+            let answer = []
+            comb.forEach((element) => answer.push(element.reduce((acc, v) => acc + v, 0)))
+            answer.sort((a, b) => {return a - b}).reverse()
+            return answer[n - 1]
+        }
+        console.log(solution([13, 15, 34, 23, 45, 65, 33, 11, 26, 42], 3))
+    </script>
+</body>
+</html>

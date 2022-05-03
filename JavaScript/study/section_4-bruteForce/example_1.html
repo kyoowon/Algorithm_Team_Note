@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const solution = (arr) => {
+            let maxValue = Number.MIN_SAFE_INTEGER
+            let answer = 0
+            arr.forEach((nbr) => {
+                // sum = 0
+                // temp = nbr
+                // while (temp){
+                //     sum += Math.floor(temp % 10)
+                //     temp = Math.floor(temp / 10)
+                // }
+                // if (maxValue <= sum){
+                //     maxValue = sum
+                //     answer = Math.max(nbr, answer)
+                // }
+                sum = nbr.split('').reduce((acc, v) => Number(acc) + Number(v), 0)
+                if (maxValue <= sum){
+                    maxValue = sum
+                    answer = Math.max(nbr, answer)
+                }
+            })
+            return answer
+        }
+        console.log(solution(["128", "460", "603", "40", "521", "137", "123"]))
+    </script>
+</body>
+
+</html>
