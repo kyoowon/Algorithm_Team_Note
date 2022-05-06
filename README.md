@@ -32,3 +32,6 @@
 -------------
 
 [1. JavaScript](JavaScript/team_note.js)<br>
+2. Combination & Permutation
+    - [Combination](JavaScript/Algorithm/Combination.js)<br>
+    - [Permutation](JavaScript/Algorithm/permutation.js)<br>
