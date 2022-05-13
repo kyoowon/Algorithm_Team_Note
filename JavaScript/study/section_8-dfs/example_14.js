@@ -2,14 +2,16 @@
 
 const example_14 = (n, r) => {
     let answer = []
-    let tmp = Array.from({length: r}, ()=>0)
+    let tmp = Array.from({
+        length: r
+    }, () => 0)
     const dfs = (l, s) => {
-        if (l === r){
+        if (l === r) {
             answer.push(tmp.slice())
-        }else{
-            for(let i=s; i <= n; i++){
+        } else {
+            for (let i = s; i <= n; i++) {
                 tmp[l] = i
-                dfs(l + 1, i+1)
+                dfs(l + 1, i + 1)
             }
         }
     }
