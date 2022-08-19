@@ -96,4 +96,6 @@ replay_pid*
 .classpath
 .project
 
+src
 # End of https://www.toptal.com/developers/gitignore/api/java,eclipse
+/build/
