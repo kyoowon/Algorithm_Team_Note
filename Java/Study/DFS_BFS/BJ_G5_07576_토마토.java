@@ -14,7 +14,7 @@ import java.util.StringTokenizer;
  * @category BFS
  * @memo
  */
- 
+
 public class BJ_G5_07576_토마토 {
 	static class Tomato {
 		int x;
