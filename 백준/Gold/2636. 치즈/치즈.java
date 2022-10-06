@@ -57,8 +57,9 @@ public class Main {
 	static int time;
 	static int extra;
 	private static void bfs() {
+		Queue<Node> edges = null;
 		while(true) {			
-			Queue<Node> edges = getEdges();
+			edges = getEdges(edges);
 			if (edges.isEmpty())
 				break;
 			time++;
@@ -69,12 +70,18 @@ public class Main {
 		}
 	}
 	
-	private static Queue<Node> getEdges() {
+	private static Queue<Node> getEdges(Queue<Node> e) {
 		Queue<Node> edges = new LinkedList<>();
-		Queue<Node> temp = new LinkedList<>();
+		Queue<Node> temp = null;
 		boolean[][] visited = new boolean[N][M];
-		visited[0][0] = true;
-		temp.add(new Node(0, 0, 0));
+		if (e != null) {			
+			temp = e;
+		}
+		else {
+			temp = new LinkedList<>();			
+			visited[0][0] = true;
+			temp.add(new Node(0, 0, 0));
+		}
 		while(!temp.isEmpty()) {
 			Node node = temp.poll();
 			for (int d = 0; d < deltas.length; d++) {
