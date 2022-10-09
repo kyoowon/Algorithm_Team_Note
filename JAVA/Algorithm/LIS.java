@@ -9,8 +9,8 @@ import java.util.StringTokenizer;
 
 /**
  * 
- * @author LIS - DP
- * @memo 이는 시간 복잡도가 공차가 1인 등차수열의 합만큼의 시간복잡도를 가진다. O(n^2)
+ * @author LIS - DP / LIS - Binary Search
+ * @memo 이는 시간 복잡도가 공차가 1인 등차수열의 합만큼의 시간복잡도를 가진다. O(n^2) / O(nlgn)
  *
  */
 
