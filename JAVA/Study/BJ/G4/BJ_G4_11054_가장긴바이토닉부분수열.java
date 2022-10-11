@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 /**
  * @author kyulee
  * @link https://www.acmicpc.net/problem/11054
- * @performance
+ * @performance 13060	112
  * @category LIS + DP
  * @memo
  */
