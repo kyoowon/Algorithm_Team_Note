@@ -7,6 +7,14 @@ import java.util.List;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
+/**
+ * @author kyulee
+ * @link https://www.acmicpc.net/problem/9205
+ * @performance 	12660	108
+ * @category BFS
+ * @memo
+ */
+
 public class BJ_S1_09205_맥주마시면서걸어가기 {
 	static class Node {
 		int x;
