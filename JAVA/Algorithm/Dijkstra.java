@@ -6,7 +6,7 @@ import java.io.StringReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class DijkstraTest {
+public class Dijkstra {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader reader = new BufferedReader(new StringReader(str));
 		int V = Integer.parseInt(reader.readLine());
